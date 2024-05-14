@@ -13,6 +13,6 @@ M.ui = {
 	-- },
 }
 
-M.plugins = "custom.plugins"
+M.plugins = "plugins"
 
 return M
