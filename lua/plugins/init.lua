@@ -22,6 +22,8 @@ return {
         "mypy",
         "ruff",
         "pyright",
+        "biome",
+        "typescript-language-server"
       },
     },
   },
