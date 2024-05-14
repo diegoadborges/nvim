@@ -1,5 +1,4 @@
 return {
-  {
     "lewis6991/gitsigns.nvim",
     require("gitsigns").setup {
       signs = {
@@ -44,5 +43,4 @@ return {
         col = 1,
       },
     },
-  },
 }

@@ -1,5 +1,4 @@
 return {
-  {
     "kevinhwang91/nvim-ufo",
     event = "BufRead",
     dependencies = {
@@ -31,5 +30,4 @@ return {
 
       require("ufo").setup()
     end,
-  },
 }
