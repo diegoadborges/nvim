@@ -7,7 +7,6 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
-
 map("n", "]b", function()
   require("nvchad.tabufline").next()
 end, { desc = "Buffer Goto next" })
@@ -17,3 +16,5 @@ map("n", "[b", function()
 end, { desc = "Buffer Goto prev" })
 
 map({ "n", "i", "v" }, "<C-s>", "<cmd> wa <cr>")
+
+map({ "n" }, "<leader>v", ":vsplit<space>")
