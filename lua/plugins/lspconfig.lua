@@ -6,7 +6,7 @@ return {
     local capabilities = require("nvchad.configs.lspconfig").capabilities
 
     local lspconfig = require "lspconfig"
-    local servers = { "pyright", "tsserver", "html", "cssls" }
+    local servers = { "sqlls", "pyright", "tsserver", "html", "cssls" }
 
     -- lsps with default config
     for _, lsp in ipairs(servers) do

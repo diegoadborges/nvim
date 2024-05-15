@@ -10,6 +10,9 @@ return {
       "pyright",
       "biome",
       "typescript-language-server",
+      "sqlfluff",
+      "sql-formatter",
+      "sqlls",
     },
   },
 }
