@@ -17,7 +17,7 @@ return {
         graphql = { "prettier" },
         lua = { "stylua" },
         python = { "ruff", "black" },
-        sql = { "sql_formatter" },
+        sql = { "sqlfmt" },
       },
       format_on_save = {
         lsp_fallback = true,
