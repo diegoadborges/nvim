@@ -10,6 +10,7 @@ return {
       "pyright",
       "biome",
       "typescript-language-server",
+      "lua-language-server",
       "sqlfmt",
       "sqlls",
     },
