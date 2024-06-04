@@ -8,9 +8,9 @@ return {
     local lint = require "lint"
 
     lint.linters_by_ft = {
-      javascript = { "biomejs" },
-      typescript = { "biomejs" },
-      json = { "biomejs" },
+      javascript = { "eslint_d" },
+      typescript = { "eslint_d" },
+      json = { "eslint_d" },
       python = { "ruff" },
     }
 
