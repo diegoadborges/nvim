@@ -6,15 +6,15 @@ return {
     local capabilities = require("nvchad.configs.lspconfig").capabilities
 
     local lspconfig = require "lspconfig"
-    local servers = { "sqlls", "pyright", "tsserver", "html", "cssls", "lua_ls", "jdtls" }
+    local servers = { "sqlls", "pyright", "tsserver", "html", "cssls", "lua_ls" }
 
     require("java").setup {}
-    require("lspconfig").jdtls.setup {
-      on_attach = require("plugins.lspconfig").on_attach,
-      capabilities = require("plugins.lspconfig").capabilities,
+    lspconfig.jdtls.setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
       filetypes = { "java" },
     }
-    -- lsps with default config
+
     for _, lsp in ipairs(servers) do
       lspconfig[lsp].setup {
         on_attach = on_attach,
