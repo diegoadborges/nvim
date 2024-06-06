@@ -5,9 +5,10 @@
 local M = {}
 
 M.ui = {
-  theme = "gruvbox",
-  transparency = true,
+  theme = "gruvchad",
+  transparency = false,
   lsp_semantic_tokens = true,
+  theme_toggle = { "gruvbox", "one_light" },
 }
 
 M.plugins = "plugins"
