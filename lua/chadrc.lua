@@ -6,6 +6,8 @@ local M = {}
 
 M.ui = {
   theme = "gruvbox",
+  transparency = true,
+  lsp_semantic_tokens = true,
 }
 
 M.plugins = "plugins"
