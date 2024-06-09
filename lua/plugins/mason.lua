@@ -13,6 +13,9 @@ return {
       "lua-language-server",
       "sqlfmt",
       "sqlls",
+      "prettier",
+      "google-java-format",
+      "eslint_d",
     },
   },
 }
