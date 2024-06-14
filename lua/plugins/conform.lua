@@ -19,6 +19,7 @@ return {
         python = { "ruff", "black" },
         sql = { "sqlfmt" },
         java = { "google-java-format" },
+        cpp = { "clang-format" },
       },
       format_on_save = {
         lsp_fallback = true,
