@@ -21,6 +21,7 @@ return {
       "codelldb",
       "gopls",
       "goimports",
+      "jdtls"
     },
   },
 }
