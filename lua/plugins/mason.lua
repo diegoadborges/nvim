@@ -19,6 +19,8 @@ return {
       "clangd",
       "clang-format",
       "codelldb",
+      "gopls",
+      "goimports",
     },
   },
 }

@@ -20,7 +20,7 @@ return {
         sql = { "sqlfmt" },
         java = { "google-java-format" },
         cpp = { "clang-format" },
-        go = { "gofmt`" },
+        go = { "gofmt", "goimports" },
       },
       format_on_save = {
         lsp_fallback = true,
