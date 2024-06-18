@@ -6,13 +6,20 @@ return {
     local capabilities = require("nvchad.configs.lspconfig").capabilities
 
     local lspconfig = require "lspconfig"
-    local servers = { "sqlls", "pyright", "tsserver", "html", "cssls", "lua_ls" }
+    local servers = { "sqlls", "pyright", "tsserver", "html", "cssls", "lua_ls", "gopls" }
 
     require("java").setup {}
     lspconfig.jdtls.setup {
       on_attach = on_attach,
       capabilities = capabilities,
       filetypes = { "java" },
+    }
+
+    lspconfig.clangd.setup {
+      on_attach = function(client, bufnr)
+        client.server_capabilities.signatureHelpProvider = false
+        on_attach(client, bufnr)
+      end,
     }
 
     for _, lsp in ipairs(servers) do

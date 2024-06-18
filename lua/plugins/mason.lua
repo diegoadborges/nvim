@@ -16,6 +16,12 @@ return {
       "prettier",
       "google-java-format",
       "eslint_d",
+      "clangd",
+      "clang-format",
+      "codelldb",
+      "gopls",
+      "goimports",
+      "jdtls"
     },
   },
 }
