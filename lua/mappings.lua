@@ -22,3 +22,5 @@ map({ "n" }, "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Add break
 map({ "n" }, "<leader>dr", "<cmd> DapContinue <CR>", { desc = "Start or continue the debugger" })
 
 map({ "n" }, "<leader>rs", ":NvimTreeResize <space>", { desc = "Resize the NvimTree" })
+map({ "n" }, "<leader>rd", vim.lsp.buf.rename, { desc = "Rename references" })
+map({ "n" }, "<leader>fr", "<cmd> :Telescope lsp_references <CR>", { desc = "Find references" })
