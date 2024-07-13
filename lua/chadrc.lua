@@ -9,6 +9,7 @@ M.ui = {
   transparency = false,
   lsp_semantic_tokens = true,
   theme_toggle = { "gruvbox", "one_light" },
+  lsp = { signature = false },
 }
 
 M.plugins = "plugins"
