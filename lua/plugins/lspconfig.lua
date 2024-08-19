@@ -9,15 +9,15 @@ return {
     local lspconfig = require "lspconfig"
 
     -- Fix hover in jdtls
-    local jdtls_config = require "java-core.ls.servers.jdtls.config"
-    local opts = jdtls_config.get_config()
-    opts.init_options.extendedClientCapabilities.clientHoverProvider = nil
-    jdtls_config.get_config = function()
-      return opts
-    end
+    -- local jdtls_config = require "java-core.ls.servers.jdtls.config"
+    -- local opts = jdtls_config.get_config()
+    -- opts.init_options.extendedClientCapabilities.clientHoverProvider = nil
+    -- jdtls_config.get_config = function()
+    --   return opts
+    -- end
 
-    require("java").setup {}
-    lspconfig.jdtls.setup {}
+    -- require("java").setup {}
+    -- lspconfig.jdtls.setup {}
 
     lspconfig.clangd.setup {
       on_attach = function(client, bufnr)
