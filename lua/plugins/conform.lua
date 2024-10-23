@@ -21,6 +21,7 @@ return {
         java = { "google-java-format" },
         cpp = { "clang-format" },
         go = { "gofmt", "goimports" },
+        toml = { "taplo" },
       },
       format_on_save = {
         lsp_fallback = true,
