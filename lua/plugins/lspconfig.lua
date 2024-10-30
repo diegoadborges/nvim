@@ -5,7 +5,7 @@ return {
     local on_init = require("nvchad.configs.lspconfig").on_init
     local capabilities = require("nvchad.configs.lspconfig").capabilities
 
-    local servers = { "sqlls", "pyright", "tsserver", "html", "cssls", "lua_ls", "gopls" }
+    local servers = { "sqlls", "pyright", "tsserver", "html", "cssls", "gopls" }
     local lspconfig = require "lspconfig"
 
     -- Fix hover in jdtls
@@ -18,7 +18,30 @@ return {
 
     -- require("java").setup {}
     -- lspconfig.jdtls.setup {}
+    local config_path = vim.fn.stdpath "config"
 
+    lspconfig.lua_ls.setup {
+      settings = {
+        Lua = {
+          runtime = {
+            version = "LuaJIT",
+          },
+
+          diagnostics = {
+            globals = {
+              "vim",
+              "packer_plugins",
+            },
+          },
+          workspace = {
+            library = {
+              [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+              [config_path .. "/lua"] = true,
+            },
+          },
+        },
+      },
+    }
     lspconfig.clangd.setup {
       on_attach = function(client, bufnr)
         client.server_capabilities.signatureHelpProvider = false
