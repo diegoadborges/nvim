@@ -5,7 +5,7 @@ return {
     local on_init = require("nvchad.configs.lspconfig").on_init
     local capabilities = require("nvchad.configs.lspconfig").capabilities
 
-    local servers = { "sqlls", "pyright", "tsserver", "html", "cssls", "gopls" }
+    local servers = { "sqlls", "pyright", "ts_ls", "html", "cssls", "gopls" }
     local lspconfig = require "lspconfig"
 
     -- Fix hover in jdtls
