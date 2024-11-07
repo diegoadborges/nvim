@@ -5,13 +5,13 @@
 ---@type ChadrcConfig
 return {
   base46 = {
-    theme = "gruvchad", -- default theme
+    theme = "gruvbox", -- default theme
     hl_add = {},
     hl_override = {},
     integrations = {},
     changed_themes = {},
     transparency = true,
-    theme_toggle = { "gruvchad", "one_light" },
+    theme_toggle = { "gruvbox", "one_light" },
   },
 
   ui = {
