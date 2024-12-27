@@ -16,7 +16,7 @@ return {
         markdown = { "prettier" },
         graphql = { "prettier" },
         lua = { "stylua" },
-        python = { "ruff", "black" },
+        python = { "ruff", "ruff_format" },
         sql = { "sqlfmt" },
         java = { "google-java-format" },
         cpp = { "clang-format" },
