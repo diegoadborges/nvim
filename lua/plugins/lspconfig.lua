@@ -5,7 +5,7 @@ return {
     local on_init = require("nvchad.configs.lspconfig").on_init
     local capabilities = require("nvchad.configs.lspconfig").capabilities
 
-    local servers = { "sqlls", "pyright", "ts_ls", "html", "cssls", "gopls" }
+    local servers = { "sqlls", "ts_ls", "html", "cssls", "gopls" }
     local lspconfig = require "lspconfig"
 
     -- Fix hover in jdtls
@@ -47,6 +47,21 @@ return {
         client.server_capabilities.signatureHelpProvider = false
         on_attach(client, bufnr)
       end,
+    }
+
+    lspconfig.pyright.setup {
+      settings = {
+        python = {
+          analysis = {
+            autoSearchPaths = true,
+            diagnosticMode = "openFilesOnly",
+            useLibraryCodeForTypes = true,
+            typeCheckingMode = "basic",
+            reportPossiblyUnboundVariable = "error",
+            reportUnboundVariable = "error",
+          },
+        },
+      },
     }
 
     for _, lsp in ipairs(servers) do
