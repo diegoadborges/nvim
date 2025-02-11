@@ -12,13 +12,7 @@ return {
     arg = "leetcode.nvim",
 
     ---@type lc.lang
-    lang = "cpp",
-
-    cn = { -- leetcode.cn
-      enabled = false, ---@type boolean
-      translator = true, ---@type boolean
-      translate_problems = true, ---@type boolean
-    },
+    lang = "golang",
 
     ---@type lc.storage
     storage = {
