@@ -1,3 +1,46 @@
+---@alias lc.lang
+---| "cpp"
+---| "java"
+---| "python"
+---| "python3"
+---| "c"
+---| "csharp"
+---| "javascript"
+---| "typescript"
+---| "php"
+---| "swift"
+---| "kotlin"
+---| "dart"
+---| "golang"
+---| "ruby"
+---| "scala"
+---| "rust"
+---| "racket"
+---| "erlang"
+---| "elixir"
+---| "bash"
+
+---@alias lc.hook
+---| "enter"
+---| "question_enter"
+---| "leave"
+
+---@alias lc.size
+---| string
+---| number
+---| { width: string | number, height: string | number }
+
+---@alias lc.position "top" | "right" | "bottom" | "left"
+
+---@alias lc.direction "col" | "row"
+
+---@alias lc.inject { before?: string|string[], after?: string|string[] }
+
+---@alias lc.storage table<"cache"|"home", string>
+
+---@alias lc.picker { provider?: "fzf-lua" | "telescope" }
+---
+
 return {
   "kawre/leetcode.nvim",
   build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
@@ -7,6 +50,7 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
   },
+
   opts = {
     ---@type string
     arg = "leetcode.nvim",
@@ -28,7 +72,11 @@ return {
     ---@type boolean
     logging = true,
 
-    injector = {}, ---@type table<lc.lang, lc.inject>
+    injector = {
+      ["golang"] = {
+        before = { "package leetcode;" },
+      },
+    }, ---@type table<lc.lang, lc.inject>
 
     cache = {
       update_interval = 60 * 60 * 24 * 7, ---@type integer 7 days
