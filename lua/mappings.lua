@@ -17,7 +17,7 @@ end, { desc = "Buffer Goto prev" })
 
 map({ "n", "i", "v" }, "<C-s>", "<cmd> wa <cr>")
 
-map({ "n" }, "<leader>v", ":vsplit<space>")
+map({ "n" }, "<leader>v", "<cmd> vsplit <CR>")
 map({ "n" }, "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Add breakpoint at line" })
 map({ "n" }, "<leader>dc", "<cmd> DapContinue <CR>", { desc = "Start or continue the debugger" })
 map({ "n" }, "<leader>di", "<cmd> DapStepInto <CR>", { desc = "Step into" })
