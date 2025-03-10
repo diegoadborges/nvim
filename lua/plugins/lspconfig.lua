@@ -7,17 +7,6 @@ return {
 
     local servers = { "sqlls", "ts_ls", "html", "cssls", "gopls" }
     local lspconfig = require "lspconfig"
-
-    -- Fix hover in jdtls
-    local jdtls_config = require "java-core.ls.servers.jdtls.config"
-    local opts = jdtls_config.get_config()
-    opts.init_options.extendedClientCapabilities.clientHoverProvider = nil
-    jdtls_config.get_config = function()
-      return opts
-    end
-
-    require("java").setup {}
-    lspconfig.jdtls.setup {}
     local config_path = vim.fn.stdpath "config"
 
     lspconfig.lua_ls.setup {
