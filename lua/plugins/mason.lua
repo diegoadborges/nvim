@@ -21,7 +21,8 @@ return {
       "codelldb",
       "gopls",
       "goimports",
-      "jdtls"
+      "jdtls",
+      "cspell",
     },
   },
 }

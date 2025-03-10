@@ -38,5 +38,5 @@ end)
 
 -- TODO improve this function to work with folder insted of a file
 vim.schedule(function()
-  require "commands.pyright"
+  require "commands"
 end)
