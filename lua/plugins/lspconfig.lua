@@ -7,6 +7,10 @@ return {
 
     local servers = { "sqlls", "ts_ls", "html", "cssls", "gopls" }
     local lspconfig = require "lspconfig"
+
+    require("java").setup {}
+    lspconfig.jdtls.setup {}
+
     local config_path = vim.fn.stdpath "config"
 
     lspconfig.lua_ls.setup {
