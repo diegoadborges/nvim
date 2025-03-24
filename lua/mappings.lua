@@ -33,3 +33,4 @@ map({ "n" }, "<A-k>", "<cmd> :JavaRunnerRunMain  <CR>", { desc = "Run main class
 map({ "n" }, "<A-l>", "<cmd> :JavaRunnerToggleLogs  <CR>", { desc = "Toggle java logs" })
 
 map("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss Noice Message" })
+map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
