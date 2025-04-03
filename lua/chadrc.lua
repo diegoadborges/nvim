@@ -5,13 +5,13 @@
 ---@type ChadrcConfig
 return {
   base46 = {
-    theme = "ayu_dark", -- default theme
+    theme = "nightfox", -- default theme
     hl_add = {},
     hl_override = {},
     integrations = {},
     changed_themes = {},
     transparency = false,
-    theme_toggle = { "ayu_dark", "one_light" },
+    theme_toggle = { "nightfox", "one_light" },
   },
 
   ui = {

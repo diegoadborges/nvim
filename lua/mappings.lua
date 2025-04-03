@@ -34,3 +34,5 @@ map({ "n" }, "<A-l>", "<cmd> :JavaRunnerToggleLogs  <CR>", { desc = "Toggle java
 
 map("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss Noice Message" })
 map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+map({ "n", "v" }, "<leader>t", "<cmd>GoTest<CR>", { desc = "Run go tests" })
+map({ "n", "v" }, "<leader>q", "<cmd>:q<CR>", { desc = "Close from buffer" })
