@@ -5,13 +5,13 @@
 ---@type ChadrcConfig
 return {
   base46 = {
-    theme = "nightfox", -- default theme
+    theme = "flexoki", -- default theme
     hl_add = {},
     hl_override = {},
     integrations = {},
     changed_themes = {},
     transparency = false,
-    theme_toggle = { "nightfox", "one_light" },
+    theme_toggle = { "flexoki", "one_light" },
   },
 
   ui = {
