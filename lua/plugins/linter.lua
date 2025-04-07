@@ -11,6 +11,7 @@ return {
       -- javascript = { "biomejs" },
       -- typescript = { "biomejs" },
       -- json = { "biomejs" },
+      go = { "golangcilint" },
       python = { "ruff" },
     }
 
