@@ -20,7 +20,7 @@ return {
         sql = { "sqlfmt" },
         java = { "google-java-format" },
         cpp = { "clang-format" },
-        go = { "gofmt", "goimports" },
+        go = { "gofumpt", "goimports", "golines" },
         toml = { "taplo" },
       },
       format_on_save = {
