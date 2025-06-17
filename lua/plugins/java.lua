@@ -1,6 +1,11 @@
 return {
   "nvim-java/nvim-java",
   lazy = false,
+  config = {
+    spring_boot_tools = {
+      enable = false,
+    },
+  },
   dependencies = {
     "nvim-java/lua-async-await",
     "nvim-java/nvim-java-core",
