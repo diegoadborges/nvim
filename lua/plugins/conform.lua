@@ -6,8 +6,8 @@ return {
 
     conform.setup {
       formatters_by_ft = {
-        javascript = { "prettier" },
-        typescript = { "prettier" },
+        javascript = { "biome" },
+        typescript = { "biome" },
         svelte = { "prettier" },
         css = { "prettier" },
         html = { "prettier" },

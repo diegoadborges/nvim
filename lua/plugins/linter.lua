@@ -8,8 +8,8 @@ return {
     local lint = require "lint"
 
     lint.linters_by_ft = {
-      -- javascript = { "biomejs" },
-      -- typescript = { "biomejs" },
+      javascript = { "biomejs" },
+      typescript = { "biomejs" },
       -- json = { "biomejs" },
       -- go = { "golangcilint" },
       python = { "ruff" },
