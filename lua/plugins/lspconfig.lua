@@ -6,13 +6,13 @@ return {
     local capabilities = require("nvchad.configs.lspconfig").capabilities
 
     local servers = { "sqlls", "ts_ls", "html", "cssls", "gopls" }
-    local lspconfig = require "lspconfig"
+    local lspconfig = vim.lsp.config
 
-    lspconfig.jdtls.setup {}
+    -- lspconfig.jdtls.setup {}
 
     local config_path = vim.fn.stdpath "config"
 
-    lspconfig.lua_ls.setup {
+    lspconfig("lua_ls", {
       settings = {
         Lua = {
           runtime = {
@@ -33,9 +33,9 @@ return {
           },
         },
       },
-    }
+    })
 
-    lspconfig.pyright.setup {
+    lspconfig("pyright", {
       settings = {
         python = {
           analysis = {
@@ -48,14 +48,14 @@ return {
           },
         },
       },
-    }
+    })
 
     for _, lsp in ipairs(servers) do
-      lspconfig[lsp].setup {
+      lspconfig(lsp, {
         on_attach = on_attach,
         on_init = on_init,
         capabilities = capabilities,
-      }
+      })
     end
   end,
 }
