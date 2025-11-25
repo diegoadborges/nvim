@@ -1,3 +1,7 @@
 api
 __tablename__/!
 Channel/!
+id
+monthly_data/!
+ctx
+storedEvents

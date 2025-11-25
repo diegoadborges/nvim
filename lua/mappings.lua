@@ -38,3 +38,4 @@ map({ "n", "v" }, "<leader>t", "<cmd>GoTest<CR>", { desc = "Run go tests" })
 map({ "n", "v" }, "<leader>q", "<cmd>:q<CR>", { desc = "Close from buffer" })
 
 map({ "n", "v" }, "<leader>g", "<cmd>vertical :G<CR>", { desc = "Open git status" })
+map("n", "<leader>To", "<CMD>PytestOutput<CR>", { desc = "Pytest Output" })

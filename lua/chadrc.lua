@@ -5,13 +5,13 @@
 ---@type ChadrcConfig
 return {
   base46 = {
-    theme = "gruvbox", -- default theme
+    theme = "kanagawa", -- default theme
     hl_add = {},
     hl_override = {},
     integrations = {},
     changed_themes = {},
     transparency = false,
-    theme_toggle = { "gruvbox", "one_light" },
+    theme_toggle = { "kanagawa", "one_light" },
   },
 
   ui = {
