@@ -8,6 +8,14 @@ return {
     local servers = { "sqlls", "ts_ls", "html", "cssls", "gopls" }
     local lspconfig = vim.lsp.config
 
+    local buffers_enabled = { "lua_ls", "pyright" }
+
+    for _, lsp in ipairs(buffers_enabled) do
+      vim.lsp.enable(lsp)
+    end
+
+    vim.lsp.enable "pyright"
+
     -- lspconfig.jdtls.setup {}
 
     local config_path = vim.fn.stdpath "config"
@@ -51,6 +59,7 @@ return {
     })
 
     for _, lsp in ipairs(servers) do
+      vim.lsp.enable(lsp)
       lspconfig(lsp, {
         on_attach = on_attach,
         on_init = on_init,
