@@ -22,6 +22,8 @@ return {
         cpp = { "clang-format" },
         go = { "gofumpt", "goimports", "golines" },
         toml = { "taplo" },
+        bash = { "beautysh" },
+        sh = { "beautysh" },
       },
       format_on_save = {
         lsp_fallback = true,
