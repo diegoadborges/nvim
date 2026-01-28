@@ -5,7 +5,7 @@ return {
     local on_init = require("nvchad.configs.lspconfig").on_init
     local capabilities = require("nvchad.configs.lspconfig").capabilities
 
-    local servers = { "sqlls", "ts_ls", "html", "cssls", "gopls", "lua_ls", "pyright", "bashls" }
+    local servers = { "sqlls", "ts_ls", "html", "cssls", "gopls", "lua_ls", "pyright", "bashls", "terraformls" }
     local lspconfig = vim.lsp.config
 
     -- local buffers_enabled = { "pyright" }
@@ -15,7 +15,6 @@ return {
     -- end
 
     -- vim.lsp.enable "pyright"
-
     -- lspconfig.jdtls.setup {}
 
     local config_path = vim.fn.stdpath "config"

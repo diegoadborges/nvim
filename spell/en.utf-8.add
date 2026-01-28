@@ -5,3 +5,5 @@ id
 monthly_data/!
 ctx
 storedEvents
+traffic_source_obj
+CreateCameraDTO
