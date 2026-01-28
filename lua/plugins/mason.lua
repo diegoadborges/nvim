@@ -22,6 +22,8 @@ return {
       "gopls",
       "goimports",
       "cspell",
+      "terraformls",
+      "bashls",
     },
   },
 }
