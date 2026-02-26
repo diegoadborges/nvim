@@ -11,7 +11,8 @@ return {
         svelte = { "prettier" },
         css = { "prettier" },
         html = { "prettier" },
-        json = { "prettier" },
+        json = { "biome" },
+        jsonc = { "biome" },
         yaml = { "prettier" },
         markdown = { "prettier" },
         graphql = { "prettier" },
@@ -29,6 +30,10 @@ return {
         lsp_fallback = true,
         async = false,
       },
+    }
+
+    require("conform").formatters.biome = {
+      args = { "check", "--fix", "--stdin-file-path", "$FILENAME" },
     }
   end,
 }
