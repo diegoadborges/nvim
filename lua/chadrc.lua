@@ -16,11 +16,11 @@ return {
 
   ui = {
     cmp = {
-      icons_left = false, -- only for non-atom styles!
+      icons_left = false,     -- only for non-atom styles!
       lspkind_text = true,
       style = "atom_colored", -- default/flat_light/flat_dark/atom/atom_colored
       format_colors = {
-        tailwind = true, -- will work for css lsp too
+        tailwind = true,      -- will work for css lsp too
         icon = "󱓻",
       },
     },
@@ -88,7 +88,7 @@ return {
 
   term = {
     winopts = { number = false, relativenumber = false },
-    sizes = { sp = 0.3, vsp = 0.2, ["bo sp"] = 0.3, ["bo vsp"] = 0.2 },
+    sizes = { sp = 0.3, vsp = 0.5, ["bo sp"] = 0.5, ["bo vsp"] = 0.5 },
     float = {
       relative = "editor",
       row = 0.3,
@@ -102,7 +102,7 @@ return {
   lsp = { signature = false },
 
   cheatsheet = {
-    theme = "grid", -- simple/grid
+    theme = "grid",                                                     -- simple/grid
     excluded_groups = { "terminal (t)", "autopairs", "Nvim", "Opens" }, -- can add group name or with mode
   },
 
