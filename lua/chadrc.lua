@@ -5,13 +5,13 @@
 ---@type ChadrcConfig
 return {
   base46 = {
-    theme = "kanagawa", -- default theme
+    theme = "tokyodark", -- default theme
     hl_add = {},
     hl_override = {},
     integrations = {},
     changed_themes = {},
     transparency = false,
-    theme_toggle = { "kanagawa", "one_light" },
+    theme_toggle = { "tokyodark", "one_light" },
   },
 
   ui = {
