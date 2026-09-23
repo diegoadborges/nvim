@@ -26,8 +26,16 @@ map({ "n" }, "<leader>do", "<cmd> DapStepOut <CR>", { desc = "Step out" })
 map({ "n", "v" }, "<leader>rs", ":NvimTreeResize<space>", { desc = "Resize the NvimTree" })
 map({ "n", "v" }, "<leader>rd", vim.lsp.buf.rename, { desc = "Rename references" })
 map({ "n", "v" }, "<leader>fr", "<cmd> :Telescope lsp_references <CR>", { desc = "Find references" })
-map({ "n" }, "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
-map({ "n" }, "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+map({ "n" }, "]d", function()
+  vim.diagnostic.jump({
+    count = 1
+  })
+end, { desc = "Next diagnostic" })
+map({ "n" }, "[d", function()
+  vim.diagnostic.jump({
+    count = -1
+  })
+end, { desc = "Previous diagnostic" })
 
 map({ "n" }, "<A-k>", "<cmd> :JavaRunnerRunMain  <CR>", { desc = "Run main class" })
 map({ "n" }, "<A-l>", "<cmd> :JavaRunnerToggleLogs  <CR>", { desc = "Toggle java logs" })
