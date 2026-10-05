@@ -28,12 +28,22 @@ map({ "n", "v" }, "<leader>rd", vim.lsp.buf.rename, { desc = "Rename references"
 map({ "n", "v" }, "<leader>fr", "<cmd> :Telescope lsp_references <CR>", { desc = "Find references" })
 map({ "n" }, "]d", function()
   vim.diagnostic.jump({
-    count = 1
+    count = 1,
+    on_jump = function(diagnostic, bufnr)
+      if diagnostic then
+        vim.diagnostic.open_float({ bufnr = bufnr, scope = "cursor", focus = false })
+      end
+    end,
   })
 end, { desc = "Next diagnostic" })
 map({ "n" }, "[d", function()
   vim.diagnostic.jump({
-    count = -1
+    count = -1,
+    on_jump = function(diagnostic, bufnr)
+      if diagnostic then
+        vim.diagnostic.open_float({ bufnr = bufnr, scope = "cursor", focus = false })
+      end
+    end,
   })
 end, { desc = "Previous diagnostic" })
 
